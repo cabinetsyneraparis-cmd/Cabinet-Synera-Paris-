@@ -16,10 +16,10 @@
 <style>
 
 :root{
---navy:#031633;
+--navy:#04152f;
 --navy-light:#0b2248;
 --white:#ffffff;
---text:#d9e1ec;
+--text:#d7dde8;
 --border:rgba(255,255,255,.08);
 }
 
@@ -34,20 +34,21 @@ scroll-behavior:smooth;
 }
 
 body{
-background:#031633;
+background:var(--navy);
 color:white;
 font-family:'Inter',sans-serif;
 line-height:1.9;
 overflow-x:hidden;
 }
 
+a{
+text-decoration:none;
+color:white;
+}
+
 img{
 max-width:100%;
 display:block;
-}
-
-a{
-text-decoration:none;
 }
 
 header{
@@ -56,7 +57,7 @@ top:0;
 left:0;
 width:100%;
 z-index:9999;
-background:rgba(3,22,51,.95);
+background:rgba(4,21,47,.95);
 backdrop-filter:blur(10px);
 border-bottom:1px solid var(--border);
 }
@@ -71,7 +72,7 @@ align-items:center;
 }
 
 .logo img{
-height:62px;
+height:65px;
 }
 
 nav{
@@ -80,15 +81,9 @@ gap:35px;
 }
 
 nav a{
-color:white;
 font-size:13px;
 letter-spacing:2px;
 text-transform:uppercase;
-transition:.3s;
-}
-
-nav a:hover{
-opacity:.7;
 }
 
 .hero{
@@ -97,8 +92,8 @@ min-height:100vh;
 
 background:
 linear-gradient(
-rgba(3,22,51,.70),
-rgba(3,22,51,.82)
+rgba(4,21,47,.65),
+rgba(4,21,47,.85)
 ),
 url("wagram.jpg");
 
@@ -111,7 +106,7 @@ align-items:center;
 justify-content:center;
 text-align:center;
 
-padding:120px 30px;
+padding:100px 30px;
 }
 
 .hero-content{
@@ -120,16 +115,14 @@ max-width:1100px;
 
 .hero h1{
 font-family:'Cormorant Garamond',serif;
-font-size:120px;
+font-size:130px;
 font-weight:600;
-letter-spacing:8px;
-line-height:1;
-margin-bottom:25px;
+letter-spacing:10px;
+margin-bottom:20px;
 }
 
 .hero-subtitle{
 font-size:22px;
-color:white;
 margin-bottom:35px;
 letter-spacing:1px;
 }
@@ -139,39 +132,25 @@ font-family:'Cormorant Garamond',serif;
 font-size:58px;
 font-weight:400;
 line-height:1.3;
-margin-bottom:50px;
-}
-
-.instagram-btn{
-display:inline-block;
-padding:16px 34px;
-border:1px solid rgba(255,255,255,.35);
-color:white;
-transition:.3s;
-}
-
-.instagram-btn:hover{
-background:white;
-color:#031633;
 }
 
 .section{
-max-width:1300px;
+max-width:1250px;
 margin:auto;
-padding:120px 50px;
+padding:130px 50px;
 }
 
 .section-title{
 font-family:'Cormorant Garamond',serif;
-font-size:64px;
+font-size:70px;
 font-weight:500;
-margin-bottom:50px;
+margin-bottom:60px;
 }
 
 .section p{
 font-size:18px;
 color:var(--text);
-margin-bottom:25px;
+margin-bottom:28px;
 }
 
 .divider{
@@ -181,49 +160,78 @@ max-width:1300px;
 margin:auto;
 }
 
- .cards{
+.cards{
 display:grid;
 grid-template-columns:repeat(2,1fr);
 gap:40px;
-margin-top:40px;
+margin-top:60px;
 }
 
 .card{
-background:#0b2248;
+background:var(--navy-light);
 border-radius:12px;
 overflow:hidden;
 }
 
 .card img{
 width:100%;
-height:280px;
+height:320px;
 object-fit:cover;
 }
 
 .card-content{
-padding:30px;
+padding:35px;
 }
 
 .card h3{
 font-family:'Cormorant Garamond',serif;
-font-size:36px;
-margin-bottom:15px;
-}@media(max-width:1000px){
+font-size:40px;
+margin-bottom:20px;
+}
+
+footer{
+text-align:center;
+padding:80px 30px;
+border-top:1px solid var(--border);
+}
+
+.instagram-btn{
+display:inline-block;
+padding:16px 34px;
+border:1px solid rgba(255,255,255,.30);
+margin-top:20px;
+transition:.3s;
+}
+
+.instagram-btn:hover{
+background:white;
+color:var(--navy);
+}
+
+@media(max-width:1000px){
 
 .hero h1{
-font-size:72px;
+font-size:70px;
 }
 
 .hero-slogan{
-font-size:38px;
-}
-
-nav{
-display:none;
+font-size:36px;
 }
 
 .section{
 padding:80px 25px;
+}
+
+.section-title{
+font-size:48px;
+}
+
+.cards{
+grid-template-columns:1fr;
+}
+
+nav{
+display:none;
 }
 
 }
@@ -268,13 +276,6 @@ La réussite n'est pas un aboutissement.<br>
 C'est un point de départ.
 </h2>
 
-<a
-href="https://www.instagram.com/cabinet_synera"
-target="_blank"
-class="instagram-btn">
-Instagram
-</a>
-
 </div>
 
 </section>
@@ -297,10 +298,6 @@ Le cabinet accompagne des initiatives de nature variée, depuis les opérations 
 
 <p>
 Chaque mission fait l'objet d'une approche sur mesure, fondée sur la compréhension des enjeux, la pertinence des interlocuteurs mobilisés et la cohérence globale du projet.
-</p>
-
-<p>
-À travers ses différentes interventions, SYNERA agit comme facilitateur de développement, créateur de synergies et coordinateur de collaborations destinées à favoriser la réussite et la pérennité des projets qui lui sont confiés.
 </p>
 
 </section>
@@ -352,7 +349,7 @@ src="cabinet.jpg"
 alt="Cabinet SYNERA"
 style="
 width:100%;
-height:700px;
+height:750px;
 object-fit:cover;
 border-radius:12px;
 ">
@@ -368,14 +365,12 @@ CHAMPS D'INTERVENTION
 </h2>
 
 <p>
-SYNERA accompagne des projets variés nécessitant coordination, développement, structuration et mobilisation d'acteurs complémentaires.
+Le cabinet accompagne des projets nécessitant l'identification de partenaires, la coordination d'intervenants, la création de synergies ou le développement d'opportunités professionnelles.
 </p>
 
 <p>
-Chaque intervention est pensée en fonction des objectifs du client, des ressources à mobiliser et du niveau d'accompagnement requis.
+Chaque intervention repose sur une compréhension approfondie des objectifs poursuivis et sur la mobilisation d'acteurs adaptés aux enjeux du projet concerné.
 </p>
-
-<br><br>
 
 <div class="cards">
 
@@ -444,7 +439,7 @@ Développement de projet
 </h3>
 
 <p>
-Accompagnement de projets en phase de réflexion, de lancement ou de développement, avec une approche structurée et opérationnelle.
+Accompagnement de projets en phase de réflexion, de lancement ou de développement.
 </p>
 
 </div>
@@ -452,6 +447,14 @@ Accompagnement de projets en phase de réflexion, de lancement ou de développem
 </div>
 
 </div>
+
+<p style="margin-top:60px;">
+Les missions confiées à SYNERA peuvent concerner aussi bien des opérations ponctuelles que des projets de développement nécessitant un accompagnement dans la durée.
+</p>
+
+<p>
+La flexibilité du cabinet lui permet d'intervenir auprès d'entreprises, de marques, d'organisateurs, de prestataires ou de porteurs de projets recherchant une expertise de coordination, de développement ou de mise en relation.
+</p>
 
 </section>
 
@@ -477,6 +480,14 @@ Cette organisation permet à ses clients de se concentrer pleinement sur le dév
 
 <p>
 De l'identification des opportunités à leur concrétisation, SYNERA assure le suivi des démarches nécessaires à l'avancement des projets qui lui sont confiés.
+</p>
+
+<p>
+Chaque mission est suivie avec la même exigence, qu'il s'agisse d'un besoin ponctuel, d'une opération spécifique ou d'un projet nécessitant un accompagnement plus global.
+</p>
+
+<p>
+Cette implication permet au cabinet d'assurer une continuité dans les échanges, une cohérence dans les actions engagées et une meilleure fluidité dans la coordination des différents acteurs mobilisés.
 </p>
 
 </section>
@@ -506,11 +517,15 @@ Cette approche permet d'intervenir sur des projets de tailles et de secteurs var
 </p>
 
 <p>
-Plutôt qu'une approche standardisée, SYNERA privilégie une compréhension approfondie des attentes de ses clients afin de proposer des solutions adaptées à la réalité de chaque mission.
+Parce que chaque situation est différente, SYNERA privilégie une analyse approfondie des besoins avant toute mise en relation ou recommandation.
 </p>
 
 <p>
-La qualité des interlocuteurs mobilisés, la cohérence des collaborations mises en place et la rigueur du suivi constituent les fondements de cette démarche.
+L'objectif n'est pas de multiplier les contacts mais d'identifier les interlocuteurs les plus pertinents au regard des ambitions du projet concerné.
+</p>
+
+<p>
+Cette méthodologie permet de construire des collaborations cohérentes, durables et adaptées aux réalités opérationnelles de chaque mission.
 </p>
 
 </section>
@@ -524,23 +539,27 @@ NOTRE MÉTHODE
 </h2>
 
 <p>
-Chaque mission débute par une analyse approfondie des besoins, des objectifs et du contexte dans lequel évolue le projet.
+Chaque mission débute par une phase d'analyse permettant d'identifier les enjeux, les objectifs et les besoins spécifiques du projet.
 </p>
 
 <p>
-Cette première étape permet d'identifier les opportunités pertinentes, les ressources mobilisables et les interlocuteurs susceptibles d'apporter une réelle valeur ajoutée au projet.
+Cette première étape permet de définir un cadre de travail clair et de déterminer les ressources nécessaires à sa bonne réalisation.
 </p>
 
 <p>
-Le cabinet procède ensuite à l'identification et à la sélection des partenaires, prestataires ou acteurs économiques adaptés aux objectifs définis.
+Le cabinet procède ensuite à l'identification des interlocuteurs, partenaires ou prestataires susceptibles d'apporter une réelle valeur ajoutée au projet.
 </p>
 
 <p>
-Selon la nature de la mission, SYNERA assure la mise en relation, la coordination des échanges, le suivi opérationnel et l'accompagnement des différentes parties jusqu'à la concrétisation des actions engagées.
+Lorsque cela est nécessaire, SYNERA assure la coordination des échanges, l'organisation des mises en relation, le suivi des discussions et l'accompagnement des différentes parties dans la mise en œuvre des actions envisagées.
 </p>
 
 <p>
-Cette méthode permet de garantir la cohérence globale des collaborations développées et d'assurer un accompagnement structuré à chaque étape du projet.
+Cette approche favorise la fluidité des collaborations, la cohérence des décisions prises et l'efficacité des actions engagées.
+</p>
+
+<p>
+De la réflexion initiale jusqu'à la concrétisation des opportunités identifiées, le cabinet veille à assurer un accompagnement structuré et adapté aux objectifs de ses clients.
 </p>
 
 </section>
@@ -562,15 +581,19 @@ Cette proximité favorise une compréhension fine des enjeux du marché et une c
 </p>
 
 <p>
-Paris constitue un carrefour économique majeur où naissent de nombreuses opportunités de développement, de collaboration et de croissance.
+Paris constitue un carrefour économique majeur où se développent chaque année de nouvelles opportunités de collaboration, de croissance et de développement.
 </p>
 
 <p>
-Cette implantation permet au cabinet de maintenir une proximité avec les acteurs qui participent à la dynamique des projets accompagnés.
+Cette implantation permet au cabinet de rester au plus près des acteurs qui participent à la dynamique des projets accompagnés.
 </p>
 
 <p>
- Avenue de Wagram<br>
+La proximité avec les entreprises, les organisateurs, les marques et les décideurs favorise une réactivité et une capacité d'action adaptées aux besoins de chaque mission.
+</p>
+
+<p>
+📍 Avenue de Wagram<br>
 75017 Paris • France
 </p>
 
@@ -578,7 +601,7 @@ Cette implantation permet au cabinet de maintenir une proximité avec les acteur
 
 <div class="divider"></div>
 
-<section id="contact" class="section contact">
+<section id="contact" class="section">
 
 <h2 class="section-title">
 CONTACT
@@ -592,18 +615,26 @@ SYNERA
 Cabinet parisien de développement, synergies et partenariats
 </p>
 
+<p>
+Pour toute demande d'information, projet de développement, recherche de partenaires ou opportunité de collaboration, le cabinet est disponible pour étudier les besoins et envisager les modalités d'accompagnement les plus adaptées.
+</p>
+
+<p>
+Chaque prise de contact fait l'objet d'un échange confidentiel permettant d'identifier les objectifs du projet et les perspectives de collaboration envisageables.
+</p>
+
 <br>
 
 <p>
- cabinetsyneraparis@gmail.com
+✉ cabinetsyneraparis@gmail.com
 </p>
 
 <p>
- 06 36 39 78 56
+☎ 06 36 39 78 56
 </p>
 
 <p>
- Avenue de Wagram<br>
+📍 Avenue de Wagram<br>
 75017 Paris
 </p>
 
@@ -618,18 +649,54 @@ class="instagram-btn">
 
 </section>
 
+<div class="divider"></div>
+
 <footer>
 
-<p>
+<h3 style="
+font-family:'Cormorant Garamond',serif;
+font-size:42px;
+font-weight:500;
+margin-bottom:15px;
+">
 SYNERA
-</p>
+</h3>
 
-<p>
+<p style="
+max-width:700px;
+margin:auto;
+color:#d7dde8;
+">
 Cabinet parisien de développement, synergies et partenariats
 </p>
 
-<p style="margin-top:15px;">
-Paris • France
+<p style="
+margin-top:20px;
+color:#d7dde8;
+">
+Avenue de Wagram • 75017 Paris • France
+</p>
+
+<p style="
+margin-top:20px;
+color:#d7dde8;
+">
+cabinetsyneraparis@gmail.com
+</p>
+
+<p style="
+margin-top:10px;
+color:#d7dde8;
+">
+06 36 39 78 56
+</p>
+
+<p style="
+margin-top:40px;
+font-size:14px;
+opacity:.7;
+">
+© SYNERA — Tous droits réservés
 </p>
 
 </footer>
