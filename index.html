@@ -2,16 +2,12 @@
 <html lang="fr">
 
 <head>
-
 <meta charset="UTF-8">
 <meta name="viewport" content="width=device-width, initial-scale=1.0">
 
 <title>SYNERA | Cabinet parisien de développement, synergies et partenariats</title>
 
-<link rel="preconnect" href="https://fonts.googleapis.com">
-<link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-
-<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@300;400;500;600;700&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
+<link href="https://fonts.googleapis.com/css2?family=Cormorant+Garamond:wght@400;500;600&family=Inter:wght@300;400;500&display=swap" rel="stylesheet">
 
 <style>
 
@@ -26,465 +22,245 @@
 margin:0;
 padding:0;
 box-sizing:border-box;
+}
+
+html{
 scroll-behavior:smooth;
 }
 
 body{
 background:var(--navy);
+color:var(--white);
 font-family:'Inter',sans-serif;
-color:var(--text);
-line-height:1.9;
-overflow-x:hidden;
+line-height:1.8;
 }
 
-img{
-max-width:100%;
-display:block;
-}
-
-a{
-text-decoration:none;
-}
-
-.navbar{
+header{
 position:fixed;
 top:0;
-left:0;
 width:100%;
-padding:22px 8%;
+background:rgba(3,22,51,0.95);
+backdrop-filter:blur(10px);
+padding:18px 60px;
+z-index:999;
+border-bottom:1px solid rgba(255,255,255,.08);
+}
+
+.header-content{
+max-width:1400px;
+margin:auto;
 display:flex;
 justify-content:space-between;
 align-items:center;
-background:rgba(3,22,51,.92);
-backdrop-filter:blur(15px);
-z-index:9999;
 }
 
-.navbar img{
-height:60px;
-border-radius:8px;
+.logo img{
+height:62px;
 }
 
-.nav-links{
-display:flex;
-gap:30px;
-}
-
-.nav-links a{
+nav a{
 color:white;
-font-size:.95rem;
-letter-spacing:1px;
+text-decoration:none;
+margin-left:30px;
+font-size:13px;
+letter-spacing:2px;
+text-transform:uppercase;
 }
 
 .hero{
-height:100vh;
-background:url("wagram.jpg") center center/cover;
-position:relative;
-display:flex;
-align-items:center;
-justify-content:center;
+padding-top:180px;
+padding-bottom:120px;
 text-align:center;
-}
-
-.hero::before{
-content:"";
-position:absolute;
-inset:0;
-background:rgba(0,0,0,.60);
-}
-
-.hero-content{
-position:relative;
-z-index:2;
-max-width:900px;
-padding:20px;
-}
-
-.hero-logo{
-width:180px;
-margin:0 auto 30px;
-border-radius:10px;
+max-width:1100px;
+margin:auto;
 }
 
 .hero h1{
 font-family:'Cormorant Garamond',serif;
-font-size:6rem;
-color:white;
+font-size:90px;
+font-weight:600;
 letter-spacing:4px;
 }
 
 .hero p{
-font-size:1.2rem;
-letter-spacing:2px;
-color:white;
+font-size:20px;
+color:var(--text);
+margin-top:15px;
 }
 
 .hero h2{
-font-family:'Cormorant Garamond',serif;
-font-size:2.3rem;
-font-weight:300;
-margin-top:25px;
-color:white;
-}
-
-.hero-buttons{
 margin-top:40px;
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
+font-family:'Cormorant Garamond',serif;
+font-size:52px;
+font-weight:500;
 }
 
-.btn{
-padding:14px 30px;
-border:1px solid white;
-border-radius:40px;
+.instagram-btn{
+display:inline-block;
+margin-top:40px;
+padding:14px 32px;
+border:1px solid rgba(255,255,255,.3);
 color:white;
-transition:.3s;
+text-decoration:none;
 }
 
-.btn:hover{
-background:white;
-color:#031633;
-}
-
-.triptych{
-display:grid;
-grid-template-columns:repeat(3,1fr);
-height:55vh;
-}
-
-.triptych img{
-width:100%;
-height:100%;
-object-fit:cover;
-}
-
-.section{
-padding:120px 8%;
+section{
+max-width:1200px;
+margin:auto;
+padding:100px 40px;
 }
 
 .section-title{
 font-family:'Cormorant Garamond',serif;
-font-size:3rem;
-margin-bottom:30px;
-color:white;
+font-size:52px;
+margin-bottom:40px;
 }
 
-.split{
+.section-text{
+color:var(--text);
+font-size:18px;
+}
+
+.gallery{
 display:grid;
-grid-template-columns:1fr 1fr;
-gap:60px;
-align-items:center;
+grid-template-columns:repeat(auto-fit,minmax(280px,1fr));
+gap:25px;
+margin-top:70px;
 }
 
-.split img{
-border-radius:14px;
-}
-
-.text p{
-margin-bottom:20px;
-}
-
-.cards{
-display:grid;
-grid-template-columns:repeat(auto-fit,minmax(300px,1fr));
-gap:30px;
-margin-top:50px;
-}
-
-.card{
-background:var(--navy-light);
-border-radius:14px;
-overflow:hidden;
-}
-
-.card img{
+.gallery img{
 width:100%;
-height:250px;
+height:300px;
 object-fit:cover;
+border-radius:10px;
 }
 
-.card h3{
-padding:20px;
-color:white;
-font-family:'Cormorant Garamond',serif;
-font-size:2rem;
+.contact{
+text-align:center;
 }
 
-.card p{
-padding:0 20px 25px;
-}
-
-.no-image-card{
-background:var(--navy-light);
-padding:35px;
-border-radius:14px;
+.contact p{
+margin:12px 0;
+font-size:18px;
 }
 
 footer{
-padding:120px 8%;
+padding:50px;
 text-align:center;
-background:#021126;
-}
-
-footer img{
-width:320px;
-max-width:100%;
-margin:0 auto 35px;
-border-radius:14px;
-}
-
-.footer-buttons{
-margin-top:35px;
-display:flex;
-justify-content:center;
-gap:15px;
-flex-wrap:wrap;
-}
-
-@media(max-width:900px){
-
-.nav-links{
-display:none;
-}
-
-.hero h1{
-font-size:4rem;
-}
-
-.hero h2{
-font-size:1.7rem;
-}
-
-.triptych{
-grid-template-columns:1fr;
-height:auto;
-}
-
-.triptych img{
-height:300px;
-}
-
-.split{
-grid-template-columns:1fr;
-}
-
+border-top:1px solid rgba(255,255,255,.08);
+color:#9aa5b8;
 }
 
 </style>
-
 </head>
 
 <body>
 
-<nav class="navbar">
+<header>
 
+<div class="header-content">
+
+<div class="logo">
 <img src="logo-synera.jpg" alt="SYNERA">
-
-<div class="nav-links">
-<a href="#accueil">Accueil</a>
-<a href="#cabinet">Le Cabinet</a>
-<a href="#interventions">Interventions</a>
-<a href="#contact">Contact</a>
 </div>
 
+<nav>
+<a href="#accueil">Accueil</a>
+<a href="#cabinet">Le Cabinet</a>
+<a href="#contact">Contact</a>
 </nav>
 
-<header class="hero">
+</div>
 
-<div class="hero-content">
+</header>
 
-<img src="logo-synera.jpg" class="hero-logo" alt="SYNERA">
+<section class="hero" id="accueil">
 
 <h1>SYNERA</h1>
 
-<p>
-Cabinet parisien de développement, synergies et partenariats
-</p>
+<p>Cabinet parisien de développement, synergies et partenariats</p>
 
 <h2>
 La réussite n'est pas un aboutissement.<br>
 C'est un point de départ.
 </h2>
 
-<div class="hero-buttons">
-
-<a href="https://www.instagram.com/cabinet_synera" target="_blank" class="btn">
+<a
+class="instagram-btn"
+href="https://www.instagram.com/cabinet_synera"
+target="_blank">
 Instagram
 </a>
 
-<a href="https://wa.me/33636397856" target="_blank" class="btn">
-WhatsApp
-</a>
-
-</div>
-
-</div>
-
-</header>
-
-<section class="triptych">
-
-<img src="accueil.jpg" alt="">
-<img src="cabinet.jpg" alt="">
-<img src="wagram.jpg" alt="">
-
 </section>
 
-<section id="accueil" class="section">
+<section>
 
-<div class="split">
+<div class="gallery">
 
-<div class="text">
+<img src="cabinet.jpg" alt="Cabinet">
 
-<h2 class="section-title">ACCUEIL</h2>
+<img src="evenement.jpg" alt="Événement">
 
-<p>Fondé à Paris, SYNERA intervient dans la conception, le développement et la structuration de projets impliquant des entreprises, des marques, des prestataires, des organisateurs et des acteurs économiques issus d'univers complémentaires.</p>
+<img src="partenariats.jpg" alt="Partenariats">
 
-<p>Le cabinet accompagne des initiatives de nature variée, depuis les opérations événementielles jusqu'au développement de partenariats stratégiques, en passant par l'identification d'opportunités de collaboration et la coordination de projets transverses.</p>
+<img src="networking.jpg" alt="Networking">
 
-<p>Chaque mission fait l'objet d'une approche sur mesure, fondée sur la compréhension des enjeux, la pertinence des interlocuteurs mobilisés et la cohérence globale du projet.</p>
-
-</div>
-
-<img src="accueil.jpg" alt="">
+<img src="reunion.jpg" alt="Réunion">
 
 </div>
 
 </section>
 
-<section id="cabinet" class="section">
-
-<div class="split">
-
-<img src="cabinet.jpg" alt="">
-
-<div class="text">
+<section id="cabinet">
 
 <h2 class="section-title">LE CABINET</h2>
 
-<p>SYNERA est né d'une conviction simple : les projets les plus ambitieux nécessitent souvent la convergence de compétences, d'expertises et d'acteurs complémentaires.</p>
+<div class="section-text">
 
-<p>Le cabinet intervient comme partenaire de réflexion, de coordination et de structuration auprès de ses clients.</p>
+<p>
+SYNERA est né d'une conviction simple : les projets les plus ambitieux nécessitent souvent la convergence de compétences, d'expertises et d'acteurs complémentaires.
+</p>
 
-<p>Au fil de ses missions, SYNERA a développé des relations professionnelles durables avec des acteurs issus de secteurs variés : événementiel, hôtellerie, lieux de réception, restauration, transport, production, communication, animation, marques, organisateurs de salons, prestataires techniques et services spécialisés.</p>
+<br>
 
-</div>
+<p>
+Le cabinet intervient comme partenaire de réflexion, de coordination et de structuration auprès de ses clients.
+</p>
+
+<br>
+
+<p>
+Au fil de ses missions, SYNERA a développé des relations professionnelles durables avec des acteurs issus de secteurs variés.
+</p>
 
 </div>
 
 </section>
 
-<section id="interventions" class="section">
+<section id="contact" class="contact">
 
-<h2 class="section-title" style="text-align:center;">
-CHAMPS D'INTERVENTION
-</h2>
+<h2 class="section-title">CONTACT</h2>
 
-<div class="cards">
+<p>cabinetsyneraparis@gmail.com</p>
 
-<div class="card">
-<img src="partenariats.jpg">
-<h3>Partenariats stratégiques</h3>
-<p>Identification, structuration et développement de collaborations professionnelles adaptées aux objectifs de chaque projet.</p>
-</div>
+<p>06 36 39 78 56</p>
 
-<div class="card">
-<img src="evenement.jpg">
-<h3>Événementiel</h3>
-<p>Accompagnement de projets événementiels privés et professionnels.</p>
-</div>
-
-<div class="no-image-card">
-<h3 style="color:white;margin-bottom:20px;">Salons professionnels</h3>
-<p>Développement de synergies entre organisateurs, exposants, partenaires et intervenants.</p>
-</div>
-
-<div class="card">
-<img src="identite.jpg">
-<h3>Marques & visibilité</h3>
-<p>Création d'opportunités de collaboration et d'activations adaptées à l'identité et aux ambitions des marques.</p>
-</div>
-
-<div class="card">
-<img src="reunion.jpg">
-<h3>Développement de projet</h3>
-<p>Accompagnement de projets en phase de réflexion, de lancement ou de développement.</p>
-</div>
-
-<div class="card">
-<img src="networking.jpg">
-<h3>Networking & relations professionnelles</h3>
-<p>Conception et coordination de rencontres favorisant les échanges et les opportunités d'affaires.</p>
-</div>
-
-</div>
-
-</section>
-
-<section class="section">
-
-<div class="split">
-
-<div class="text">
-
-<h2 class="section-title">PARIS AU CŒUR DE NOS ACTIVITÉS</h2>
+<p>Avenue de Wagram, Paris 17e</p>
 
 <p>
-Implanté dans le 17ᵉ arrondissement de Paris, SYNERA évolue au sein d'un environnement où se rencontrent entreprises, marques, institutions, prestataires et organisateurs.
-</p>
-
-<p>
-📍 Avenue de Wagram<br>
-75017 Paris • France
-</p>
-
-</div>
-
-<img src="wagram.jpg">
-
-</div>
-
-</section>
-
-<footer id="contact">
-
-<img src="contact.jpg">
-
-<h2 class="section-title">
-CONTACT
-</h2>
-
-<p>SYNERA</p>
-
-<p>
-Cabinet parisien de développement, synergies et partenariats
-</p>
-
-<p>
-✉ cabinetsyneraparis@gmail.com
-</p>
-
-<p>
-☎ 06 36 39 78 56
-</p>
-
-<p>
-📍 Avenue de Wagram • 75017 Paris
-</p>
-
-<div class="footer-buttons">
-
-<a href="https://www.instagram.com/cabinet_synera" target="_blank" class="btn">
-Instagram
+<a
+href="https://www.instagram.com/cabinet_synera"
+style="color:white;">
+@cabinet_synera
 </a>
+</p>
 
-<a href="https://wa.me/33636397856" target="_blank" class="btn">
-WhatsApp
-</a>
+</section>
 
-</div>
+<footer>
+
+SYNERA — Paris
 
 </footer>
 
